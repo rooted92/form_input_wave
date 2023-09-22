@@ -33,6 +33,30 @@ body {
   color: lightblue;
 }
 
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background-color: lightblue;
+  padding: .9rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 0;
+  border-radius: .3rem;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.text {
+  margin-top: .8rem;
+}
+
 .form-control {
   position: relative;
   margin: 1.4rem 0 2.5rem;
@@ -45,7 +69,7 @@ body {
   border-bottom: 2px #FFF solid;
   display: block;
   width: 100%;
-  padding: .9rem 0;
+  padding: 1rem 0;
   font-size: 1.1rem;
   color: white;
 }
@@ -53,4 +77,25 @@ body {
 .form-control input:focus,
 .form-control input:valid {
   outline: 0;
+  border-bottom-color: lightblue;
+}
+
+.form-control label {
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 1.2rem;
+  min-width: .5rem;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid _ label span {
+  color: lightblue;
+  letter-spacing: .2rem;
+  transform: translateY(-2.2rem);
 }
